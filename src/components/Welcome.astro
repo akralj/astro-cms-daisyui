@@ -1,13 +1,22 @@
 ---
-import astroLogo from "../assets/astro.svg"
+import Layout from "../layouts/Layout.astro"
 import background from "../assets/background.svg"
 ---
 
-<div id="container">
-  <img id="background" src={background.src} alt="" fetchpriority="high" />
-  <main>
-    <section id="hero">
-      <h2 class="text-3xl font-bold text-green-800">tailwind test</h2>
-    </section>
-  </main>
-</div>
+<Layout>
+  <div id="container" class="relative min-h-screen flex items-center justify-center">
+    <img id="background" src={background.src} alt="" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="card lg:card-side bg-base-100 shadow-sm">
+      <figure>
+        <img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp" alt="Album" />
+      </figure>
+      <div class="card-body">
+        <h2 class="card-title">DaisyUI rocks!</h2>
+        <p>Click the button to get some docs.</p>
+        <div class="card-actions justify-end">
+          <button class="btn btn-primary">Open Docs</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
