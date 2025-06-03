@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro"
 import background from "../assets/background.svg"
 import rocks from "../assets/images/rocks.jpg"
+import { Image } from "astro:assets"
 ---
 
 <Layout>
@@ -9,7 +10,7 @@ import rocks from "../assets/images/rocks.jpg"
     <img id="background" src={background.src} alt="" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" />
     <div class="card lg:card-side bg-base-100 shadow-sm">
       <figure>
-        <img src={rocks.src} alt="Album" />
+        <Image src={rocks} alt="Album" width={400} height={400} loading="eager" fit="cover" position="top" />
       </figure>
       <div class="card-body items-center justify-center">
         <h2 class="card-title justify-center">DaisyUI rocks!</h2>
