@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import background from "../assets/background.svg"
+import rocks from "../assets/images/rocks.jpg"
 ---
 
 <Layout>
@@ -8,13 +9,12 @@ import background from "../assets/background.svg"
     <img id="background" src={background.src} alt="" fetchpriority="high" class="absolute inset-0 w-full h-full object-cover" />
     <div class="card lg:card-side bg-base-100 shadow-sm">
       <figure>
-        <img src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.webp" alt="Album" />
+        <img src={rocks.src} alt="Album" />
       </figure>
-      <div class="card-body">
-        <h2 class="card-title">DaisyUI rocks!</h2>
-        <p>Click the button to get some docs.</p>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Open Docs</button>
+      <div class="card-body items-center justify-center">
+        <h2 class="card-title justify-center">DaisyUI rocks!</h2>
+        <div class="card-actions justify-center mt-2">
+          <button class="btn btn-primary btn-sm">Open</button>
         </div>
       </div>
     </div>
