@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets"
+const { frontmatter } = Astro.props
+const { title, date, thumbnail, rating } = frontmatter
+import Layout from "./Layout.astro"
+
+// Format date for display
+const formattedDate = new Date(date).toLocaleDateString("de-DE", {
+  year: "numeric",
+  month: "long",
+  day: "numeric"
+})
+---
+
+<Layout>
+  <h1 class="card-title text-secondary">{title}</h1>
+  <Image src={thumbnail} alt={title} width={200} height={200} />
+  <p>{formattedDate}</p>
+</Layout>
