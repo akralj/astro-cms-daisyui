@@ -49,5 +49,6 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 ### Deployment to custom domain my.domain.com
 
+- set CNAME in your DNS to {username}.github.io
 - add CNAME file to root of project with the domain name, e.g. my.domain.com
 - click enforce https, to redirect http to https
