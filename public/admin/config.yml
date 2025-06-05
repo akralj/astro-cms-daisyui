@@ -3,7 +3,7 @@ local_backend: true
 
 backend:
   name: github
-  repo: akralj/local
+  repo: akralj/astro-cms-daisyui
   branch: master
 
 media_folder: "assets/uploads"
